@@ -47,7 +47,7 @@
                 }
             }
 
-            function submitMessage() {
+            async function submitMessage() {
                 form = document.getElementById("form");
                 inputField = document.getElementById("message");
                 message = inputField.value;
@@ -56,6 +56,12 @@
                 messageContainer.innerHTML = message;
                 form.appendChild(messageContainer);
                 inputField.value = "";
+                const response = await fetch("http://localhost:3000/messages", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ message }),
+                })
+                console.log(response);
             }
         </script>
     </body>

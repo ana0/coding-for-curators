@@ -1,12 +1,17 @@
 const express = require('express');
 const sqlite3 = require('sqlite3').verbose();
 const path = require('path');
+const cors = require('cors');
 
 const app = express();
 const PORT = 3000;
 
+// Middleware to enable CORS for all origins
+app.use(cors());
+
 // Middleware to parse JSON bodies
 app.use(express.json());
+app.use(express.urlencoded());
 
 // Initialize SQLite database
 const dbPath = path.join(__dirname, 'messages.db');
