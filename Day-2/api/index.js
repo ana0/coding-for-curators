@@ -31,6 +31,24 @@ const db = new sqlite3.Database(dbPath, (err) => {
         console.error('Error creating table:', err.message);
       } else {
         console.log('Messages table ready.');
+        db.all('SELECT * FROM messages ORDER BY created_at DESC', [], (err, rows) => {
+          if (err) {
+            console.error('Error fetching messages:', err.message);
+          } else {
+            if (rows.length === 0) {
+              db.run('INSERT INTO messages (message) VALUES (?)', ["This is a hardcoded startup message"], function(err) {
+                if (err) {
+                  console.error('Error inserting message:', err.message);
+                } else {
+                  console.log("Inserted startup messages")
+                }
+              });
+            } else {
+              console.log("Found existing messages")
+            }
+          }
+        });
+
       }
     });
   }

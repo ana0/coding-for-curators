@@ -6,49 +6,12 @@
 - What browsers?
 - Does everyone have VSCode?
 
-## Let's open a Command Line
+## Plan for the Day
 
-
-
-## Where is Data Stored?
-
-We'll look at a few places data can be stored, and their implications for websites. 
-
-
-
-
-### Let's talk about HTTP requests
-
-There are three types of HTTP requests, each with a canonical purpose
-
-- GET
-- POST
-- PUT
-- DELETE
-
-### Send some data with a POST request
-
-
-```
-async function submitMessage() {
-    // the rest of your code here
-    const response = await fetch("http://localhost:3000/messages", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ message }),
-    })
-}
-```
-
-Note this function is *async*
-
-
-### Running a very simple server
-
-1. Install node and npm from https://nodejs.org/en/download
-
-2. Open a terminal in vscode
-
-    ```npm i```
-
-    ```npm run start```
+| Time | Activity | 
+| -------- | -------- | 
+| 10:00-12:00 | Activity 1: Data sources and APIs |
+| 12:00-13:00 | Discussion: Assessing artwork technical requirements |
+| 13:00-14:00 | LUNCH and HEK tours |
+| 14:00-15:00 | Lecture: 10 things every Curator should know about curating Software |
+| 15:00-17:00 | Activity 2: P5.js and ✨ vibe coding ✨ |
