@@ -1,0 +1,61 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: black;
+    color: white;
+    padding: 0 10%;
+}
+
+h1 {
+    font-family: Arial;
+    font-size: 40pt;
+    padding-top: 40px;
+}
+
+img {
+    width: 100%;
+}
+
+p {
+    font-size: 20pt;
+}
+
+a {
+    font-weight: bold;
+    font-size: 24pt;
+}
+
+form {
+    background-color: white;
+    color: black;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+input {
+    height: 40px;
+    width: 80%;
+    border-radius: 0;
+    border-width: 1px;
+}
+
+.submit {
+    background-color: black;
+    color: white;
+    margin-top: 16px;
+    padding: 8px 0;
+    width: 100%;
+    text-align: center;
+    border: none;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+button {
+    background-color: white;
+    color: black;
+    padding: 20px;
+    margin: 20px;
+    border: none;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}

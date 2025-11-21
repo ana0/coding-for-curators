@@ -1,0 +1,68 @@
+<!DOCTYPE html> <!-- Defines this document to be HTML 5 -->
+<html> <!-- root element of html page -->
+    <head>
+        <title>Coding for Curator's webpage</title>
+        <link rel="stylesheet" href="styles.css">
+        <style>
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1>My title</h1>
+            <img src="my-img.jpg" alt="An image of a computer." />
+            <p id="myElement">This is some text to accompany the image and populate the website.</p>
+            <a href="http://www.hek.ch">Website of HEK</a><br>
+            <a href="./coding_for_curators.html">My second page</a><br>
+            <button type="button" onclick="myFunction()">Click me</button>
+            <button type="button" onclick="changeColor()" id="coloredButton" style="background-color:blue">Click me to change the colour</button>
+            <button type="button" onclick="countUp()" id="counter">Click me to count to 100</button>
+        </div>
+        <form id="form">
+            <label for="message">Leave a message:</label>
+            <input type="text" id="message" name="message"><br>
+            <button type="button" class="submit" onclick="submitMessage()">Submit</div>
+        </form>
+
+        <script>
+            function myFunction() {
+                console.log("function is executing");
+                document.getElementById("myElement").innerHTML = "New text appears.";
+            }
+
+            function changeColor() {
+                element = document.getElementById("coloredButton")
+                elementColor = element.style.backgroundColor;
+                console.log(elementColor);
+                if(elementColor == "blue") {
+                    element.style.backgroundColor = "green";
+                } else {
+                    element.style.backgroundColor = "blue";
+                }
+            }
+
+            function countUp() {
+                counter = document.getElementById("counter");
+                for (i = 0; i <= 100; i++) {
+                    counter.innerHTML = i;
+                }
+            }
+
+            async function submitMessage() {
+                form = document.getElementById("form");
+                inputField = document.getElementById("message");
+                message = inputField.value;
+                console.log(message);
+                messageContainer = document.createElement("p")
+                messageContainer.innerHTML = message;
+                form.appendChild(messageContainer);
+                inputField.value = "";
+                const response = await fetch("http://localhost:3000/messages", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ message }),
+                })
+                console.log(response);
+            }
+        </script>
+    </body>
+</html>

@@ -14,7 +14,7 @@ And add this between the `<body>` tags
 
 And finally, save the contents of `sketch.js` to the same folder as your website
 
-## Shapes, Colours, Movement
+### Shapes, Colours, Movement
 
 There are two components to a P5 sketch, most of what we'll be doing in in the `draw()` function
 
@@ -39,7 +39,7 @@ You can also make things move and change colour
 Let's write this together
 ```
 
-## Mouse Input
+### Mouse Input
 
 P5 sketches can be interactive in a lot of ways, but a popular one is mouse input. 
 
@@ -56,7 +56,7 @@ One of the biggest differences between P5 and normal web interactions, if P5 can
 Let's write this together
 ```
 
-## Using data in P5
+### Using data in P5
 
 You can also use data that we fetched this morning in P5!
 
@@ -80,7 +80,7 @@ And then in your P5 sketch
 ```
 Try to make something happen in your sketch conditionally based on the weather
 
-## You can style and position the P5 canvas, just like any other element
+### You can style and position the P5 canvas, just like any other element
 
 Try applying some style rules either to elements with `canvas` type, or to elements with `id` of `defaultCanvas`
 
@@ -97,6 +97,6 @@ canvas {
 }
 ```
 
+## ✨ vibe coding ✨
 
-
-
+Download and install Cursor: https://cursor.com/download
